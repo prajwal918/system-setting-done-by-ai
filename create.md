@@ -54,3 +54,14 @@ The Wi-Fi connection was automatically dropping or disconnecting every ~10 minut
 5. **Windows Developer Mode Reverted**
    - ~~Modified the system registry (`HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock`) to permanently enable Windows Developer Mode.~~ *(Reverted by user request)*
    - Fully disabled Developer Mode in the registry, restoring standard Windows security restrictions against unverified or unsigned applications.
+
+## Part 3: Agent Automation & Tool Checks
+
+### Actions Taken by AI
+
+1. **Auto-Documentation Memory Set**
+   - Permanently saved a memory rule: I will now *always* automatically document system changes, settings adjustments, and tool installations to this markdown file and auto-push it to the `prajwal918/system-setting-done-by-ai` repository without needing to be asked in any future CLI sessions.
+
+2. **Tool Verification**
+   - **Kilocode (`kilo`):** Confirmed successfully installed and running properly globally.
+   - **Visual Studio Code (`code`):** Confirmed already installed (v1.109.5) and accessible from the command line.
