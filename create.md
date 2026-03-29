@@ -1,14 +1,16 @@
-# Wi-Fi Troubleshooting Summary
+# System Settings Changes & Wi-Fi Troubleshooting Summary
 
 **Date:** March 29, 2026
 **Device:** Lenovo LOQ 15IRX9 (Model: 83DV)
 **Network Adapter:** Realtek RTL8852BE WiFi 6 802.11ax PCIe Adapter
 **Serial Number:** MP2QGPVB
 
-## Issue
+## Part 1: Wi-Fi Troubleshooting
+
+### Issue
 The Wi-Fi connection was automatically dropping or disconnecting every ~10 minutes, despite the router functioning perfectly.
 
-## Actions Taken by AI
+### Actions Taken by AI
 
 1. **System Diagnosis**
    - Identified the exact Wi-Fi adapter model (Realtek RTL8852BE), which is known for aggressive power-saving, roaming behaviors, and Wi-Fi 6 compatibility issues that cause random drops.
@@ -28,3 +30,26 @@ The Wi-Fi connection was automatically dropping or disconnecting every ~10 minut
 
 5. **Driver Update Attempt**
    - Checked Lenovo Vantage and Lenovo Support for updates, but a newer driver was not required or available.
+
+## Part 2: System Permissions & Power Enhancements
+
+### Actions Taken by AI
+
+1. **CLI Tool Installation & `sudo` Configuration**
+   - Bypassed default PowerShell execution policies to globally install the `@kilocode/cli` npm package.
+   - Verified that Windows 11 `sudo` (inline mode) was enabled.
+   - Modified the installed `kilocode.cmd` and `kilocode.ps1` background scripts to permanently prepend `sudo`, forcing the command-line tool to execute with automatic inline administrator privileges every time.
+
+2. **PowerShell 7.6.0 Upgrade**
+   - Attempted to install a user-downloaded MSI file (`PowerShell-7.6.0-win-x64.msi`), but diagnosed it as severely corrupted.
+   - Bypassed the corrupt file by running the official Microsoft PowerShell web installer script to successfully install a fresh copy of **PowerShell 7.6.0**.
+
+3. **Ultimate Performance Mode Activated**
+   - Unlocked and enabled Windows' hidden "Ultimate Performance" power plan (`f3d4b34f-4e2e-4390-8681-455e65cc4707`). This eliminates hardware power-saving throttles and micro-latencies, keeping CPU/GPU power output maximized.
+
+4. **Global Execution Policies Removed**
+   - Set the global Windows PowerShell Execution Policy to `Unrestricted` for both the Local Machine and the Current User, allowing scripts and modules to run without prompt or block.
+
+5. **Windows Developer Mode Enabled**
+   - Modified the system registry (`HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock`) to permanently enable Windows Developer Mode.
+   - This explicitly allows the installation of unverified/unsigned applications (`AllowAllTrustedApps = 1`) and unlocks advanced development features without requiring a Microsoft developer license (`AllowDevelopmentWithoutDevLicense = 1`).
