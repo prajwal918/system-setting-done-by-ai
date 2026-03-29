@@ -44,12 +44,13 @@ The Wi-Fi connection was automatically dropping or disconnecting every ~10 minut
    - Attempted to install a user-downloaded MSI file (`PowerShell-7.6.0-win-x64.msi`), but diagnosed it as severely corrupted.
    - Bypassed the corrupt file by running the official Microsoft PowerShell web installer script to successfully install a fresh copy of **PowerShell 7.6.0**.
 
-3. **Ultimate Performance Mode Activated**
-   - Unlocked and enabled Windows' hidden "Ultimate Performance" power plan (`f3d4b34f-4e2e-4390-8681-455e65cc4707`). This eliminates hardware power-saving throttles and micro-latencies, keeping CPU/GPU power output maximized.
+3. **Ultimate Performance Mode Reverted**
+   - ~~Unlocked and enabled Windows' hidden "Ultimate Performance" power plan (`f3d4b34f-4e2e-4390-8681-455e65cc4707`).~~ *(Reverted by user request)*
+   - Switched the system back to the standard "Balanced" power plan to conserve battery and allow hardware to rest when not under heavy load. The "Ultimate Performance" plan was deleted.
 
 4. **Global Execution Policies Removed**
    - Set the global Windows PowerShell Execution Policy to `Unrestricted` for both the Local Machine and the Current User, allowing scripts and modules to run without prompt or block.
 
-5. **Windows Developer Mode Enabled**
-   - Modified the system registry (`HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock`) to permanently enable Windows Developer Mode.
-   - This explicitly allows the installation of unverified/unsigned applications (`AllowAllTrustedApps = 1`) and unlocks advanced development features without requiring a Microsoft developer license (`AllowDevelopmentWithoutDevLicense = 1`).
+5. **Windows Developer Mode Reverted**
+   - ~~Modified the system registry (`HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock`) to permanently enable Windows Developer Mode.~~ *(Reverted by user request)*
+   - Fully disabled Developer Mode in the registry, restoring standard Windows security restrictions against unverified or unsigned applications.
