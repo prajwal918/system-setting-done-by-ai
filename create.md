@@ -62,6 +62,13 @@ The Wi-Fi connection was automatically dropping or disconnecting every ~10 minut
 1. **Auto-Documentation Memory Set**
    - Permanently saved a memory rule: I will now *always* automatically document system changes, settings adjustments, and tool installations to this markdown file and auto-push it to the `prajwal918/system-setting-done-by-ai` repository without needing to be asked in any future CLI sessions.
 
-2. **Tool Verification**
+2. **GitHub Copilot Chat (VS Code) Automation**
+   - Added the custom auto-documentation instruction directly into the global VS Code `settings.json` under `github.copilot.chat.customInstructions`. The Copilot extension in VS Code will now follow this rule.
+
+3. **GitHub Copilot CLI (`gh copilot`) Automation**
+   - Created a global custom instruction file (`~/.copilot/AGENTS.md`) containing the auto-documentation rule.
+   - Set a permanent Windows environment variable (`COPILOT_CUSTOM_INSTRUCTIONS_DIRS`) pointing to `~/.copilot` so that the Copilot CLI will automatically load and obey this rule across all terminal sessions.
+
+4. **Tool Verification**
    - **Kilocode (`kilo`):** Confirmed successfully installed and running properly globally.
    - **Visual Studio Code (`code`):** Confirmed already installed (v1.109.5) and accessible from the command line.
