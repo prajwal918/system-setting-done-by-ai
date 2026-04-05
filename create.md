@@ -72,3 +72,24 @@ The Wi-Fi connection was automatically dropping or disconnecting every ~10 minut
 4. **Tool Verification**
    - **Kilocode (`kilo`):** Confirmed successfully installed and running properly globally.
    - **Visual Studio Code (`code`):** Confirmed already installed (v1.109.5) and accessible from the command line.
+
+## Part 4: All MCQ Application Updates
+
+### Date: April 6, 2026
+
+### Actions Taken by AI
+
+1. **Practice Mode Logic Update (Unit 2)**
+   - Modified the `selectAnswer()` function to automatically award points and mark any selected answer as correct (green) for all Unit 2 subjects in Practice Mode.
+   - This change affects subjects like DAA, DBMS, SEPM, Maths, and MP & ES when they are identified as "UNIT 2" in the application catalog.
+
+2. **Practice Mode Enhancement (Unit 1)**
+   - Updated the `renderQuestion()` function to show the correct answer immediately upon loading a question in Practice Mode for Unit 1 subjects, facilitating instant learning.
+   - For Unit 2 subjects, the correct answer is hidden until selected, at which point the selection automatically turns green.
+
+3. **Function Renaming for Clarity**
+   - Renamed `loadQuestion()` to `renderQuestion()` and `check()` to `selectAnswer()` to better reflect their purposes and align with the requested architectural direction.
+
+4. **Codebase Synchronization**
+   - Successfully committed and pushed these changes to the `prajwal918/all-mcq` repository on the `master` branch.
+   - Resolved merge conflicts during the update process to ensure the latest features (like KaTeX math rendering and external JSON loading) were preserved.
