@@ -79,17 +79,16 @@ The Wi-Fi connection was automatically dropping or disconnecting every ~10 minut
 
 ### Actions Taken by AI
 
-1. **Practice Mode Logic Update (Unit 2)**
-   - Modified the `selectAnswer()` function to automatically award points and mark any selected answer as correct (green) for all Unit 2 subjects in Practice Mode.
-   - This change affects subjects like DAA, DBMS, SEPM, Maths, and MP & ES when they are identified as "UNIT 2" in the application catalog.
+1. **Practice Mode Final Logic (Unit 2)**
+   - Modified `selectAnswer()` to ensure that for Unit 2 subjects (DAA, DBMS, SEPM, Maths, MP & ES), **any answer selected by the user is automatically marked as correct (green)** and awards a point.
+   - Updated `renderQuestion()` to correctly re-highlight these selected answers when navigating through previously answered questions in Unit 2.
 
 2. **Practice Mode Enhancement (Unit 1)**
-   - Updated the `renderQuestion()` function to show the correct answer immediately upon loading a question in Practice Mode for Unit 1 subjects, facilitating instant learning.
-   - For Unit 2 subjects, the correct answer is hidden until selected, at which point the selection automatically turns green.
+   - Maintained the feature where the correct answer is highlighted immediately upon question load for Unit 1 subjects, facilitating rapid study.
 
-3. **Function Renaming for Clarity**
-   - Renamed `loadQuestion()` to `renderQuestion()` and `check()` to `selectAnswer()` to better reflect their purposes and align with the requested architectural direction.
+3. **Function Renaming & Integrity**
+   - Renamed `loadQuestion()` to `renderQuestion()` and `check()` to `selectAnswer()` for architectural clarity.
+   - Ensured no code truncation or shortening occurred during the update process.
 
-4. **Codebase Synchronization**
-   - Successfully committed and pushed these changes to the `prajwal918/all-mcq` repository on the `master` branch.
-   - Resolved merge conflicts during the update process to ensure the latest features (like KaTeX math rendering and external JSON loading) were preserved.
+4. **Repository Sync**
+   - Successfully pushed final changes to `prajwal918/all-mcq` master branch and documented here in `prajwal918/system-setting-done-by-ai`.
