@@ -79,12 +79,9 @@ The Wi-Fi connection was automatically dropping or disconnecting every ~10 minut
 
 ### Actions Taken by AI
 
-1. **Practice Mode Final Logic (Unit 2)**
-   - Modified `selectAnswer()` to ensure that for Unit 2 subjects (DAA, DBMS, SEPM, Maths, MP & ES), **any answer selected by the user is automatically marked as correct (green)** and awards a point.
-   - Updated `renderQuestion()` to correctly re-highlight these selected answers when navigating through previously answered questions in Unit 2.
-
-2. **Practice Mode Enhancement (Unit 1)**
-   - Maintained the feature where the correct answer is highlighted immediately upon question load for Unit 1 subjects, facilitating rapid study.
+1. **Practice Mode Final Logic (All Units)**
+   - Modified `selectAnswer()` to ensure that for ALL subjects across all units, **any answer selected by the user is automatically marked as correct (green)** and awards a point.
+   - Updated `renderQuestion()` to correctly re-highlight these selected answers when navigating through previously answered questions.
 
 3. **Function Renaming & Integrity**
    - Renamed `loadQuestion()` to `renderQuestion()` and `check()` to `selectAnswer()` for architectural clarity.
