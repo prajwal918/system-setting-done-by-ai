@@ -79,9 +79,10 @@ The Wi-Fi connection was automatically dropping or disconnecting every ~10 minut
 
 ### Actions Taken by AI
 
-1. **Practice Mode Final Logic (All Units)**
-   - Modified `selectAnswer()` to ensure that for ALL subjects across all units, **any answer selected by the user is automatically marked as correct (green)** and awards a point.
-   - Updated `renderQuestion()` to correctly re-highlight these selected answers when navigating through previously answered questions.
+1. **Practice Mode Final Logic (Always On)**
+   - Modified `renderQuestion()` to **immediately highlight the correct answer (green)** as soon as a question loads in Practice Mode. This ensures the correct answer is "always on" for study purposes.
+   - Any selection by the user in Practice Mode still awards a point and turns that selection green (correct).
+   - Updated navigation logic to correctly re-highlight these answers when moving back and forth through questions.
 
 3. **Function Renaming & Integrity**
    - Renamed `loadQuestion()` to `renderQuestion()` and `check()` to `selectAnswer()` for architectural clarity.
